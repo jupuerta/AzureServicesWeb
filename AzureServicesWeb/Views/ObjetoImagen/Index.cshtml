@@ -1,0 +1,33 @@
+﻿@model IEnumerable<AzureServicesWeb.Models.ObjetoImagen>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Identificar objetos en imágenes</h1>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.URImagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Objetos)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <img class="imagAnalizar" src=@Html.DisplayFor(modelItem => item.URImagen)>
+            </td>
+            <td class="textoTD">
+                @Html.DisplayFor(modelItem => item.Objetos)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

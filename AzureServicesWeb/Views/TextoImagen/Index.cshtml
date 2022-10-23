@@ -1,0 +1,33 @@
+﻿@model IEnumerable<AzureServicesWeb.Models.TextoImagen>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Extraer texto de imagenes</h1>
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.URImagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Texto)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <img class="imagAnalizar" src=@Html.DisplayFor(modelItem => item.URImagen)>
+            </td>
+            <td class="textoTD">
+                @Html.DisplayFor(modelItem => item.Texto)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

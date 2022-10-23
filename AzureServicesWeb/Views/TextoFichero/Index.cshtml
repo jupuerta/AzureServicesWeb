@@ -1,0 +1,54 @@
+﻿@model IEnumerable<AzureServicesWeb.Models.TextoFichero>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Texto en los ficheros y su análisis</h1>
+
+<p>Numero de textos evaluados: @ViewData["Num"]</p>
+<p>Media Probabilidad Positiva: @ViewData["MedPos"]</p>
+<p>Media Probabilidad Media: @ViewData["MedNeut"]</p>
+<p>Media Probabilidad Negativa: @ViewData["MedNeg"]</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Texto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sentimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProbPositivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProbNeutro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProbNegativo)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Texto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sentimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProbPositivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProbNeutro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProbNegativo)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
