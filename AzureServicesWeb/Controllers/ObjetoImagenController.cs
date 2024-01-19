@@ -8,7 +8,7 @@ namespace AzureServicesWeb.Controllers
     public class ObjetoImagenController : Controller
     {
         public async Task<IActionResult> Index()
-        {
+        { 
             ObjetoImagenServices service = new ObjetoImagenServices();
             List<ObjetoImagen> objima = (await service.GetAllDataAsync()) as List<ObjetoImagen>;
             return View(objima);
