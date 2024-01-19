@@ -16,3 +16,4 @@ Al mostrar las líneas en las tablas de resultados he utilizado **bootstrap** pa
 A la hora de mostrar los resultados ha habido alguna limitación:
 * En TextoEnFichero, la API de Azure tenía una restricción de procesar a la vez solo 10 ficheros.
 * En TextoEnImagen y ObjetoEnImagen, el tiempo de respuesta era muy elevado por lo que se han reducido el número de fotos a procesar.
+
